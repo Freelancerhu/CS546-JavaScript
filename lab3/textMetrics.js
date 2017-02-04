@@ -1,0 +1,174 @@
+module.exports = {
+	simplify : function(data){
+		let temString = data.toLowerCase();
+		let XX = temString.replace(/\W+/g, " ");
+		
+		return XX;
+	},
+	
+	createMetrics : function(data) {
+		console.log("CreatNetrics");
+		//let words = {};
+		//let temString = data.toLowerCase();
+		//let XX = temString.replace(/\W+/g, " ");
+		let scanString = data;//传进来的数据
+		let totalLetters = 0;//总字母数
+		
+		let totalWords = 0;// the number of words.
+		
+		let uniqueWords = 0;// total number of unique words that appear in the text.
+		
+		let longWords = 0;//number of words in the text that are 6 or more letters long.
+		
+		let averageWordLength = 0;//the average number of letters in a word in the text.
+		let tem = [];
+		let temS = "";
+		let temN = "";
+		let x = 0;
+		let res = {};
+		let wordOccurrences = {};
+		
+		for(let i = 0; i != data.length; ++i){
+			if(isNaN(scanString[i])){
+				++totalLetters;//总字母数
+			}
+			//if(/^[A-Za-z]+$/.test( scanString[i] )){
+			if( isNaN(scanString[i])){
+				temS += scanString[i];
+				//console.log(temS);
+			}else if(/^\d+$/.test(scanString[i])){
+				temN += scanString[i]
+				//console.log(temN);
+				//console.log(i);
+			} 
+			
+			if((i+1) === scanString.length){
+				if(isNaN(scanString[i])){
+					let j = 0;
+					for(let i = 0; i < x; ++i){
+						if(tem[i] !== temS){
+							++j;
+						}
+					}
+					if(j === (x-1)){
+						++uniqueWords;
+					}
+
+					if(temS.length >= 6){
+						longWords++;
+					}
+					tem[x] = temS;
+					if(temS.length >= 1){
+						++totalWords;
+					}
+				}else{
+					tem[x] = temN;
+				}
+			}
+			
+			
+			
+			if((scanString[i] === ' ' )){
+				if( (temS !== "" )){
+					let j = 0;
+					for(let i = 0; i < x; ++i){
+						if(tem[i] !== temS){
+							++j;
+						}
+					}
+					if(j === (x)){
+						++uniqueWords;
+					}
+					if(temS.length >= 6){
+						longWords++;
+					}
+					if(temS.length >= 1){
+						++totalWords;
+					}
+					tem[x] = temS;
+					x++;
+					//console.log(`zi = ${x}`);
+				}
+				
+				if( (temN !== "" )){
+					tem[x] = temN;
+					x++;
+					//console.log(`shu = ${x}`);
+				}
+				temS = "";
+				temN = "";
+			}
+			
+			
+			
+			
+			
+			
+		}
+		
+		averageWordLength = totalLetters / totalWords;
+		
+		
+		//for(let i = 0; i != 16; ++i){
+		//	console.log(tem[i]);
+		//	}
+		//console.log(tem[15]);
+		//for(let i = 0; tem[i] != undefined; ++i){
+		//	console.log(i);
+		//}
+		//console.log(tem[0]);
+		
+		//wordOccurrences
+		
+		
+		for(let i = 0; i != x+1; ++i){
+			if(tem[i] !== "" ){
+				let num = 1;
+				for(let j = 0; j != x+1; ++j){
+					if((tem[i] === tem[j])&&(i != j)){
+						++num;
+						tem[j] = "";
+						
+					}
+					wordOccurrences[tem[i]] = num;
+				}
+				
+				
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		//console.log("the number of letters = " + totalLetters);
+		//console.log("the number of words = " + totalWords);
+		//console.log("the number of unique = " + uniqueWords);
+		//console.log("the number of longWords = " + longWords);
+		//console.log("the number of averageWordLength = " + averageWordLength);
+		
+		res["totalLetters"] = totalLetters;
+		res['totalWords'] = totalWords;
+		res['uniqueWords'] = uniqueWords;
+		res['longWords'] = longWords;
+		res['averageWordLength'] = averageWordLength;
+		res['wordOccurrences'] = wordOccurrences;
+		
+		
+		
+		
+		
+		
+		//console.log(res);
+		//console.log(wordOccurrences);
+		
+		
+		return res;
+	}
+	
+	
+	
+	
+}
