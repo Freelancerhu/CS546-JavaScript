@@ -2,15 +2,11 @@ module.exports = {
 	simplify : function(data){
 		let temString = data.toLowerCase();
 		let XX = temString.replace(/\W+/g, " ");
-		
 		return XX;
 	},
 	
 	createMetrics : function(data) {
 		console.log("CreatNetrics");
-		//let words = {};
-		//let temString = data.toLowerCase();
-		//let XX = temString.replace(/\W+/g, " ");
 		let scanString = data;//传进来的数据
 		let totalLetters = 0;//总字母数
 		
@@ -32,16 +28,11 @@ module.exports = {
 			if(isNaN(scanString[i])){
 				++totalLetters;//总字母数
 			}
-			//if(/^[A-Za-z]+$/.test( scanString[i] )){
 			if( isNaN(scanString[i])){
 				temS += scanString[i];
-				//console.log(temS);
 			}else if(/^\d+$/.test(scanString[i])){
 				temN += scanString[i]
-				//console.log(temN);
-				//console.log(i);
 			} 
-			
 			if((i+1) === scanString.length){
 				if(isNaN(scanString[i])){
 					let j = 0;
@@ -65,9 +56,6 @@ module.exports = {
 					tem[x] = temN;
 				}
 			}
-			
-			
-			
 			if((scanString[i] === ' ' )){
 				if( (temS !== "" )){
 					let j = 0;
@@ -98,29 +86,8 @@ module.exports = {
 				temS = "";
 				temN = "";
 			}
-			
-			
-			
-			
-			
-			
 		}
-		
 		averageWordLength = totalLetters / totalWords;
-		
-		
-		//for(let i = 0; i != 16; ++i){
-		//	console.log(tem[i]);
-		//	}
-		//console.log(tem[15]);
-		//for(let i = 0; tem[i] != undefined; ++i){
-		//	console.log(i);
-		//}
-		//console.log(tem[0]);
-		
-		//wordOccurrences
-		
-		
 		for(let i = 0; i != x+1; ++i){
 			if(tem[i] !== "" ){
 				let num = 1;
@@ -128,12 +95,9 @@ module.exports = {
 					if((tem[i] === tem[j])&&(i != j)){
 						++num;
 						tem[j] = "";
-						
 					}
 					wordOccurrences[tem[i]] = num;
 				}
-				
-				
 			}
 		}
 		

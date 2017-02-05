@@ -5,7 +5,6 @@ let fileData = exports = module.exports;
 fileData.getFileAsString = (path) => {
 	return new Promise((fulfill, reject) => {
 		if(!path) reject("No path is provided.");
-		
 		fs.readFile(path, "utf-8", (error, data) => {
 			if(error) {
 				reject(error);
@@ -20,7 +19,6 @@ fileData.getFileAsString = (path) => {
 fileData.getFileAsJSON = (path) => {
 	return new Promise((fulfill, reject) => {
 		if(!path) reject("No path is provided.");
-		
 		fs.readFile(path, "utf-8", (error, data) => {
 			if(error) {
 				reject(error);
@@ -38,7 +36,6 @@ fileData.getFileAsJSON = (path) => {
 fileData.saveStringToFile = (path, data) => {
 	return new Promise((fulfill, reject) => {
 		if(!path) reject("No path is provided.");
-		
 		fs.writeFile(path, data, (error, data) => {
 			if(error) {
 				reject(error);
@@ -51,7 +48,6 @@ fileData.saveStringToFile = (path, data) => {
 fileData.saveJSONToFile = (path, data) => {
 	return new Promise((fulfill, reject) => {
 		if(!path) reject("No path is provided.");
-		
 		fs.writeFile(path, JSON.stringify(data, null, 4), (error, data) => {
 			if(error) {
 				reject(error);
