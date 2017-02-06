@@ -1,9 +1,9 @@
 {
-    "totalLetters": 16941,
-    "totalWords": 4222,
-    "uniqueWords": 971,
+    "totalLetters": 16946,
+    "totalWords": 4225,
+    "uniqueWords": 973,
     "longWords": 817,
-    "averageWordLength": 4.012553292278541,
+    "averageWordLength": 4.010887573964497,
     "wordOccurrences": {
         "3": 1,
         "27": 2,
@@ -976,8 +976,6 @@
         "soared": 1,
         "followed": 1,
         "late": 1,
-        "birds": 1,
-        "flown": 1,
-        "undefined": 1
+        "birds": 1
     }
 }

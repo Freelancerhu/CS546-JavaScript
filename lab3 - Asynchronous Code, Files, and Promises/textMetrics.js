@@ -31,8 +31,10 @@ module.exports = {
 			if( isNaN(scanString[i])){
 				temS += scanString[i];
 			}else if(/^\d+$/.test(scanString[i])){
+				++totalLetters;
 				temN += scanString[i]
 			} 
+			
 			if((i+1) === scanString.length){
 				if(isNaN(scanString[i])){
 					let j = 0;
@@ -41,7 +43,7 @@ module.exports = {
 							++j;
 						}
 					}
-					if(j === (x-1)){
+					if(j === x){
 						++uniqueWords;
 					}
 
@@ -49,14 +51,25 @@ module.exports = {
 						longWords++;
 					}
 					tem[x] = temS;
-					if(temS.length >= 1){
-						++totalWords;
-					}
+					++totalWords;
+
 				}else{
+					let j = 0;
+					for(let i = 0; i < x; ++i){
+						if(tem[i] !== temN){
+							++j;
+						}
+					}
+					if(j === (x)){
+						++uniqueWords;
+					}
+					++totalWords;
 					tem[x] = temN;
 				}
 			}
-			if((scanString[i] === ' ' )){
+			
+			
+			if((scanString[i] === ' ' && (i+1) !== scanString.length)){
 				if( (temS !== "" )){
 					let j = 0;
 					for(let i = 0; i < x; ++i){
@@ -70,18 +83,24 @@ module.exports = {
 					if(temS.length >= 6){
 						longWords++;
 					}
-					if(temS.length >= 1){
-						++totalWords;
-					}
+					++totalWords;
 					tem[x] = temS;
 					x++;
-					//console.log(`zi = ${x}`);
+					
 				}
-				
 				if( (temN !== "" )){
+					let j = 0;
+					for(let i = 0; i < x; ++i){
+						if(tem[i] !== temN){
+							++j;
+						}
+					}
+					if(j === x){
+						++uniqueWords;
+					}
+					++totalWords;
 					tem[x] = temN;
 					x++;
-					//console.log(`shu = ${x}`);
 				}
 				temS = "";
 				temN = "";

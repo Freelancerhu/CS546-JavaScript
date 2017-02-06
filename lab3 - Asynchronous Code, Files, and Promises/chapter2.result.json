@@ -1,9 +1,9 @@
 {
-    "totalLetters": 11984,
-    "totalWords": 3024,
-    "uniqueWords": 777,
+    "totalLetters": 11991,
+    "totalWords": 3028,
+    "uniqueWords": 780,
     "longWords": 619,
-    "averageWordLength": 3.962962962962963,
+    "averageWordLength": 3.9600396301188905,
     "wordOccurrences": {
         "2": 1,
         "27": 3,
@@ -253,7 +253,7 @@
         "bark": 3,
         "echo": 1,
         "upbraided": 1,
-        "peter": 4,
+        "peter": 3,
         "right": 2,
         "corner": 1,
         "wanted": 1,
@@ -783,7 +783,6 @@
         "ups": 1,
         "commotion": 1,
         "firmament": 1,
-        "milky": 1,
-        "undefined": 1
+        "milky": 1
     }
 }

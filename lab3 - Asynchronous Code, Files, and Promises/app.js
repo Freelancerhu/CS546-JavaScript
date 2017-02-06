@@ -53,6 +53,7 @@ fileData.getFileAsString("chapter1.txt").then((fileData) => {
 	console.log(err);
 });
 */
+
 fileData.getFileAsJSON('chapter2.result.json').then((jsonData) => {
 	console.log(jsonData);
 }).catch((err) => {
@@ -103,4 +104,3 @@ fileData.getFileAsJSON('chapter3.result.json').then((jsonData) => {
 		console.log(err);
 	});
 });
-

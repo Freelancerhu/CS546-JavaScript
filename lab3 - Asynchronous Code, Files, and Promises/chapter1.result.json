@@ -1,9 +1,9 @@
 {
-    "totalLetters": 12792,
-    "totalWords": 3116,
-    "uniqueWords": 882,
+    "totalLetters": 12795,
+    "totalWords": 3118,
+    "uniqueWords": 885,
     "longWords": 640,
-    "averageWordLength": 4.105263157894737,
+    "averageWordLength": 4.103592046183451,
     "wordOccurrences": {
         "1": 1,
         "14": 1,
@@ -46,7 +46,7 @@
         "with": 26,
         "it": 47,
         "to": 60,
-        "her": 52,
+        "her": 51,
         "mother": 9,
         "i": 16,
         "suppose": 1,
@@ -888,7 +888,6 @@
         "teeth": 1,
         "gnashed": 1,
         "little": 1,
-        "pearls": 1,
-        "undefined": 1
+        "pearls": 1
     }
 }
