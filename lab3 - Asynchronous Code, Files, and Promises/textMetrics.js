@@ -1,7 +1,8 @@
 module.exports = {
 	simplify : function(data){
 		let temString = data.toLowerCase();
-		let XX = temString.replace(/\W+/g, " ");
+		let XX = temString.replace(/\n\t/g, " ");
+		XX = XX.replace(/[^a-z0-9 ]/g, '')
 		return XX;
 	},
 	
