@@ -1,0 +1,17 @@
+{
+  "name": "lab6",
+  "version": "1.0.0",
+  "description": "JSON Routers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node app.js"
+  },
+  "author": "Shengjie Hu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongodb": "^2.2.24",
+    "uuid": "^3.0.1"
+  }
+}

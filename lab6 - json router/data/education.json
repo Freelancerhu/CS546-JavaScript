@@ -1,0 +1,14 @@
+[
+	{
+		"schoolName": "School's name : Hogwarts School of Witchcraft and Wizardry",
+		"degree": "Collage",
+		"favoriteClass" : "Dark magic",
+		"favoriteMemory": "A memorable memory from my time in that school is that I win the Quidditch Cup"
+	},
+	{
+		"schoolName": "Jurassic School",
+		"degree": "Collage",
+		"favoriteClass": "Riding",
+		"favoriteMemory": "A memorable memory from my time in that school is that I rode a out of control pterosaurs over the Mount Everest."
+	}
+]
