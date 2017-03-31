@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Site</title>
+    <link rel="stylesheet" href="/public/css/main.css"
+        crossorigin="anonymous">
+</head>
+<body>
+    <main class="container">
+        <h1>Palindrome Checker!</h1>
+                {{{body}}}
+        <h2> Is-Palindrome</h2>
+        <div class="alert alert-success is-palindrome" id="is-palindrome">
+            <ul id = "ip">
+                {{#each ip}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>  
+		</div>
+        <h3>Not-Palindrome</h3>
+        <div class="alert alert-success not-palindrome" id="not-palindrome">
+            <ul id = "inp">
+                {{#each inp}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul> 
+        </div>
+    </main>
+<footer>
+  <p>Posted by: Shengjie Hu</p>
+  <p>student ID: 10414302</p>
+  <p>Contact information: <a href="mailto:someone@example.com">shu14@stevens.edu</a>.</p>
+</footer>
+</body>
+</html>
