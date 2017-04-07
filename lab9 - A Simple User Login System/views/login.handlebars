@@ -1,0 +1,14 @@
+<form action="/login" method="post">
+    <label>Username</label>
+    <input type = "text" name="username" placeholder="Username">
+    <br/>
+    <label>Passcode</label>
+    <input type = "password" name="password" placeholder="Password">
+  <br/>>
+    <button type="submit" value="submit"> Submit</button>
+</form>
+{{#if error}}
+  <div style="color:#ee0000;">
+    <span>{{message}}</span>
+  </div>
+{{/if}}
